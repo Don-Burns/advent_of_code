@@ -1,0 +1,7 @@
+# python
+*.pyc
+*.egg-info
+# project
+.env
+.venv
+input/*.txt
