@@ -1,6 +1,5 @@
 import importlib
 import logging
-from collections.abc import Callable
 from pathlib import Path
 from types import ModuleType
 
@@ -13,7 +12,7 @@ def main() -> int:
     """
     Main function
     """
-    for day in INPUT_DIR.glob("*.txt"):
+    for day in sorted(INPUT_DIR.glob("*.txt")):
         logger.info("Running %s", day.stem)
         day_input = day.read_text()
         day_module: ModuleType = importlib.import_module(f"aoc.days.{day.stem}")
